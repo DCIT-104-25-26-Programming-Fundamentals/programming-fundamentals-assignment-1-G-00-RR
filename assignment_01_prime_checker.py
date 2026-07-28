@@ -1,8 +1,7 @@
 # =============================================================================
 # PROGRAMMING FUNDAMENTALS — Assignment 1
 # Topic: Conditional Logic, Loops, and Functions
-# =============================================================================
-#
+# =============================================================================             
 # TASK: Prime Number Checker
 #
 # Write a Python program that checks whether a given number is prime.
@@ -32,6 +31,33 @@
 #
 
 # =============================================================================
-# YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
+User_Input = int ( input("Enter the Primality Check:"));
+
+if User_Input <= 1: 
+ print("Invalid Number")
+
+else: 
+    
+    
+    def Primality (User_Input):
+ 
+     for i in range(2, User_Input):
+         if User_Input % i == 0:
+             return 0
+         
+     else: return 1   
+         
+         
+             
+result = Primality (User_Input)
+
+if result == 0:
+    
+  print(f"{User_Input} is not a prime number")
+else: print(f"{User_Input} is a prime number")
+
 # =============================================================================
+
+
+
 

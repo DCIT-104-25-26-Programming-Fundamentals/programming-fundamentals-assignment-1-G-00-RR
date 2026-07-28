@@ -37,7 +37,7 @@
 #   20 is NOT a Fibonacci number.
 #
 # -----------------------------------------------------------------------------
-# REQUIREMENTS
+# Requirement
 # -----------------------------------------------------------------------------
 # - Use a loop (not recursion) to generate the sequence in both parts.
 # - N must be a positive integer. If it is not, print an error message.
@@ -46,6 +46,49 @@
 
 #
 # =============================================================================
-# YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
+Size = int(input("Enter the number of terms: "))
+
+if Size <= 0:
+    print("Invalid Number")
+else:
+    X = [0] * Size
+    X[0] = 0
+
+    if Size > 1:
+        X[1] = 1
+
+    for i in range(2, Size):
+        X[i] = X[i - 1] + X[i - 2]
+
+    results = X
+
+    print("Fibonacci sequence:", *results)
+    
+def is_fibonacci(number):
+    if number < 0:
+        return False
+
+    a = 0
+    b = 1
+
+    if number == a or number == b:
+        return True
+
+    while b < number:
+        a, b = b, a + b
+        if b == number:
+            return True
+
+    return False
+
+
+target = int(input("Enter a number to check: "))
+
+if is_fibonacci(target):
+    print(f"{target} is a Fibonacci number.")
+else:
+    print(f"{target} is NOT a Fibonacci number.")    
+    
+
 # =============================================================================
 

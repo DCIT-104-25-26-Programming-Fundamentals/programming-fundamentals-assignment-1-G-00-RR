@@ -36,6 +36,56 @@
 #
 
 # =============================================================================
-# YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
+Size = int (input("Enter your Array size"))
+
+Numbers = [0] * Size
+
+for i in range(Size):
+    Numbers[i] = int(input(f"Enter number {i + 1}: "))
+    
+    
+def Summation(Numbers):
+        Total = 0
+        for i in range(len(Numbers)):  
+            Total = Total + Numbers[i]
+        return Total   
+    
+result = Summation(Numbers)
+print(f"Sum: {result}")     
+
+
+
+
+def Mean(Numbers):
+    Average = result / Size
+    print(f"Average: {Average}")
+    
+Mean(Numbers)
+
+
+def Maxi(Numbers):
+    Biggest = Numbers [0]
+    for i in range(len(Numbers)):
+       if  Numbers[i] > Biggest: 
+           Biggest = Numbers[i]
+    return Biggest
+
+Maximun = Maxi(Numbers)
+print(f"Maximum: {Maximun}")     
+
+
+
+def Mini(Numbers):
+    Smallest = Numbers[0]
+    for i in range(len(Numbers)): 
+        if Numbers[i] < Smallest:
+            Smallest = Numbers[i]
+            
+            
+    return Smallest 
+
+Minimum = Mini(Numbers)
+print (f"Minimum: {Minimum}")          
+        
 # =============================================================================
 

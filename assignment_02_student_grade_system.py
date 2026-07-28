@@ -42,6 +42,24 @@
 
 #
 # =============================================================================
-# YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
-# =============================================================================
+Mark =  int(input("Enter your mark: "))
 
+if Mark < 1: 
+    print("Invalid Mark")
+elif Mark > 100:
+    print("Score must be between 0 and 100")
+    
+else: 
+    
+    def Grade(Mark):
+        if Mark >= 80: 
+            print("Grade A")
+        elif Mark >=70:
+            print("Grade B ")
+        elif Mark >=60:
+            print("Grade C")
+        elif Mark >=50:
+            print("Grade D")
+        elif Mark <=49:
+            print("Grade D") 
+    Grade(Mark)      
